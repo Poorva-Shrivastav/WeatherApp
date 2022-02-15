@@ -19,6 +19,20 @@ function Main() {
 
     const cityChangeHandler = (e) => {setCity(e.target.value)}
 
+    const resetHandler = () => {
+                setCity('')
+                setWeatherState([])                    
+                setMinTemp([])
+                setMaxTemp([])
+                setAggrTemp([])
+                setWindSpeed([])
+                setVisibility([])
+                setAirPressure([])
+                setCityId(false)
+                setIsLoading(false)
+                setDisplayError(true) 
+    }
+
     function cityClickHandler(){ 
         setIsLoading(true)
         if(city !== ""){
@@ -59,14 +73,14 @@ function Main() {
       }
 
   return (
-    <div>
+    <div className='main-div'>
         <div>
-            <h2 id="heading">Weather App</h2>                                 
+            {/* <h2 id="heading">Weather App</h2>                                  */}
         </div>
-        <div>
+        <div className="div-middle">
 
             <input id="input-body" type="text" placeholder="Enter City Name" onChange={(e) => cityChangeHandler(e)}/>
-            <button id="button-body" type="button" onClick={cityClickHandler}>Enter</button>            
+            <button className="button-body" type="button" onClick={cityClickHandler}>Enter</button>            
         </div>
         
         <div>
@@ -86,19 +100,21 @@ function Main() {
                 )
                 }
                 <div className='inner-div-body'>                       
-                    <h3 id="city">{city}</h3>
-                    <p><span className="span-forecasts">{aggrTemp}&deg;C</span></p>
-                    <p>Weather: <span className="span-forecasts">{weatherState}</span></p>
-                            
-                    <div>
+                    {/* <h4 id="city">{city}</h4> */}
+                    <div className='inner-div'>
+                        <p><span className="temp">{aggrTemp}&deg;C</span></p>
+                        <p>Weather: <span className="span-forecasts">{weatherState}</span></p>
+                    </div>
+                    <div className='inner-div'>
                         <p>Min Tempreature: <span className="span-forecasts">{minTemp}&deg;C</span></p>   
                         <p>Max Tempreature: <span className="span-forecasts">{maxTemp}&deg;C</span></p>
                     </div> 
-                    <div>
+                    <div className='inner-div'>
                         <p>Wind Speed: <span className="span-forecasts">{windSpeed}</span></p>
                         <p>Visibility: <span className="span-forecasts">{visibility}</span></p>
                         <p>Air Pressure: <span className="span-forecasts">{airPressure}</span></p>   
-                    </div>                            
+                    </div> 
+                                          
                 </div>  
             </div>
             : (<h1 className={displayError ? "errorMessage": "display-none"}>City Not Found</h1>)
