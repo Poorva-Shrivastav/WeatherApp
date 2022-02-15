@@ -1,11 +1,11 @@
 import React from 'react'
-import Body from '../../components/Body/Body'
+import Main from '../../components/Main/Main'
 
 function Home() {      
   return (
     <div>     
       <div>
-        <Body />
+        <Main />
       </div>     
     </div>
   )

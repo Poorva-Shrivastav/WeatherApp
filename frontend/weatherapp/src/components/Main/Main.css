@@ -1,0 +1,56 @@
+body{
+    background-color: #f7f8fe;
+
+}
+
+#heading{
+    color: black;
+    font-size: 40px;
+}
+
+
+#input-body{
+    height: 20px;
+    font-size: 15px;
+}
+
+#button-body{
+    height: 25px;
+    margin-left: 10px;
+    background-color: #134C77;
+    color: #ffff;
+    font-weight: 600;
+    /* font-size: 15px; */
+}
+
+.inner-div-body{
+    border: 1px solid black;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 30px;
+}
+
+#errorMessage{
+    font-size: 40px;
+}
+.span-forecasts{
+    font-weight: 800;
+ 
+}
+
+.fontawesome-icons{
+    font-size: 70px;
+    margin-top:20px;
+}
+.clear{
+    color: yellow;
+    
+}
+
+.light-cloud{
+    color: rgb(68, 194, 236);
+}
+
+#city{
+    text-transform: capitalize;
+}

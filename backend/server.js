@@ -34,9 +34,14 @@ app.get('/:city', (req, res) => {
           console.log(woeidData);
           res.send(woeidData)
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+          res.send({"message":"City Not Found"})
+          console.log(err)})
       })
-    .catch(err => console.log(err))             
+    .catch(err => {
+      res.send({"message":"City Not Found"})
+      console.log(err)
+    })             
 
     });
 
