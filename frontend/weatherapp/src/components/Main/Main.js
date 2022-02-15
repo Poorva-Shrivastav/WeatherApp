@@ -79,15 +79,16 @@ function Main() {
         </div>
         <div className="div-middle">
 
-            <input id="input-body" type="text" placeholder="Enter City Name" onChange={(e) => cityChangeHandler(e)}/>
-            <button className="button-body" type="button" onClick={cityClickHandler}>Enter</button>            
+            <input id="input-body" type="text" placeholder="City Name e.g. Mumbai" onChange={(e) => cityChangeHandler(e)}/>
+            <button className="button-body" type="button" onClick={cityClickHandler}>Search</button>            
         </div>
         
         <div>
             {isLoading &&  <h3 id="loading">Loading...</h3>}
             {
-                cityId ?            
-                    <div className="fontawesome-icons">            
+                cityId ?                                          
+                    <div className='inner-div-body'> 
+                    <div className="fontawesome-icons temp-weatherstate">  
                 { weatherState && (
                             weatherState == "Sunny" ? <FontAwesomeIcon className="clear" icon={faSun} />
                             : weatherState == "Light Cloud" ? <FontAwesomeIcon className="light-cloud" icon={faCloudSun} />
@@ -99,11 +100,10 @@ function Main() {
                             : null
                 )
                 }
-                <div className='inner-div-body'>                       
-                    {/* <h4 id="city">{city}</h4> */}
-                    <div className='inner-div'>
+                </div> 
+                    <div className='inner-div temp-weatherstate'>
                         <p><span className="temp">{aggrTemp}&deg;C</span></p>
-                        <p>Weather: <span className="span-forecasts">{weatherState}</span></p>
+                        <p><span className="span-forecasts weatherState">{weatherState}</span></p>
                     </div>
                     <div className='inner-div'>
                         <p>Min Tempreature: <span className="span-forecasts">{minTemp}&deg;C</span></p>   
@@ -115,7 +115,7 @@ function Main() {
                         <p>Air Pressure: <span className="span-forecasts">{airPressure}</span></p>   
                     </div> 
                                           
-                </div>  
+                 
             </div>
             : (<h1 className={displayError ? "errorMessage": "display-none"}>City Not Found</h1>)
         } 
