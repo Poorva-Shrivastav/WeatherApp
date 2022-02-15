@@ -9,6 +9,11 @@ body{
 }
 
 
+#loading{
+    color: orange;
+}
+
+
 #input-body{
     height: 20px;
     font-size: 15px;
@@ -28,10 +33,16 @@ body{
     width: 40%;
     margin-left: 30%;
     margin-top: 30px;
+    font-size: 20px;
 }
 
-#errorMessage{
+.display-none{
+    display: none;
+}
+.errorMessage{
+    color: brown;
     font-size: 40px;
+    
 }
 .span-forecasts{
     font-weight: 800;

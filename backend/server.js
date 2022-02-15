@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
 
 app.get('/:city', (req, res) => {   
     const city = req.params.city;    
-    console.log(city);
+    // console.log(city);
     let woeid;
     fetch(`https://www.metaweather.com/api/location/search/?query=${city}`)
     .then(response =>{ return response.json()})
@@ -35,11 +35,11 @@ app.get('/:city', (req, res) => {
           res.send(woeidData)
         })
         .catch(err => {
-          res.send({"message":"City Not Found"})
+          res.send({"message":"City Not Found - 1"})
           console.log(err)})
       })
     .catch(err => {
-      res.send({"message":"City Not Found"})
+      res.send({"message":"City Not Found - 2"})
       console.log(err)
     })             
 
