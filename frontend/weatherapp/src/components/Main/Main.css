@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
 body{
-    /* background-color: #f7f8fe; */
-    background-image: url("../../components/img.png");
     background-repeat: no-repeat;
-    /* object-fit: fill; */
-    /* background-color #861657; */
     background-color: #7f53ac;
     background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
     background-position:top;
@@ -38,14 +34,6 @@ body{
 }
 
 .button-body{
-    /* height: 55px;
-    width: 5%;
-    border-radius: 10px;
-    
-    background-color: #ef6234;
-    color: #ffff;
-    font-weight: 600;
-    font-size: 17px; */
     font-size: 18px;
     height: 50px;
     width: 120px;
@@ -57,12 +45,10 @@ body{
     border: 1px solid #ef6234;
     font-weight: 600;
     cursor: pointer;
-    /* position: inherit; */
 
 }
 
 .inner-div-body{
-    /* border: 1px solid #f3e3b7; */
     background-color: #E9F0FE;
     width: 26%;
     margin-left: 37%;
@@ -92,13 +78,11 @@ body{
     font-size: 70px;
     margin-top:20px;
     padding-top: 30px;
-    /* margin-left: 37%; */
 }
 .temp{
     font-size: 35px;
     text-transform: capitalize;
     font-weight: 800;
-    /* margin-left: 35%; */
 }
 .temp-weatherstate{
     justify-content: center;
@@ -115,7 +99,6 @@ body{
 .light-cloud{
     color: rgb(68, 194, 236);
 }
-
 
 
 /* .inner-div{
